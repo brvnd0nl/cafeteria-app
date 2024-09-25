@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleconte.css"/>
+</head>
+<body>
+    <header>
+        <img src="Imagenes/Logo.png" alt="Logo" class="logo">
+        <nav class="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="Contacto.html">Contáctanos</a>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="conteneedor-items">
+            <div class="item" data-title="Frappe de café" data-image="Imagenes/comi1.png" data-description="Café de un intenso expreso con cremosa helado, Coronada con una generosa capa de crema batida">
+                <span class="titulo-item">Frappe de café</span>
+                <img src="Imagenes/comi1.png" alt="" class="img-item">
+                <span class="precio-item" data-valor="45000">$45.000</span>
+            </div>
+            <div class="item" data-title="Mochaccino" data-image="Imagenes/comi2.jpg" data-description="Deliciosa combinación de café espresso, chocolate y leche vaporizada, cubierto con crema batida y virutas de chocolate">
+                <span class="titulo-item">Mochaccino</span>
+                <img src="Imagenes/comi2.jpg" alt="" class="img-item">
+                <span class="precio-item" data-valor="45000">$45.000</span>
+            </div>
+            <!-- Agrega más items según sea necesario -->
+            <div class="item" data-title="Cappuccino" data-image="Imagenes/comi3.jpeg" data-description="Con un toque de amarula, limoncello y almendras tajadas le damos un estilo único al postre">
+                <span class="titulo-item">Cappuccino Clasico</span>
+                <img src="Imagenes/comi3.jpeg" alt="" class="img-item">
+                <span class="precio-item" data-valor="45000">$45.000</span>
+            </div>
+            <div class="item" data-title="Latte Macchiato" data-image="Imagenes/comi4.jpg" data-description="Elegante mezcla de leche vaporizada con un toque de espresso, coronado con espuma de leche">
+                <span class="titulo-item">Latte Macchiato</span>
+                <img src="Imagenes/comi4.jpg" alt="" class="img-item">
+                <span class="precio-item" data-valor="45000">$45.000</span>
+            </div>
+            <div class="item" data-title="Tiramisú" data-image="Imagenes/comi5.jpg" data-description="Con un toque de amarula, limoncello y almendras tajadas le damos un estilo único al postre">
+                <span class="titulo-item">Tiramisú</span>
+                <img src="Imagenes/comi5.jpg" alt="" class="img-item">
+                <span class="precio-item" data-valor="45000">$45.000</span>
+            </div>
+            <div class="item" data-title="Cannoli Fruttali" data-image="Imagenes/comi6.jpg" data-description="Copa de frutas de estación con crema chantilly coronada con un canoli">
+                <span class="titulo-item">Cannoli Fruttali</span>
+                <img src="Imagenes/comi6.jpg" alt="" class="img-item">
+                <span class="precio-item" data-valor="45000">$45.000</span>
+            </div>
+        </div>
+
+        <div class="carrito-container">
+            <h2>Carrito de Compras</h2>
+            <ul class="lista-carrito" id="lista-carrito">
+                <!-- Items del carrito -->
+            </ul>
+            <p id="total-carrito">Total: $0.00</p>
+            <!-- Formulario de pago -->
+            <form id="formulario-pago" action="formulario.html" method="get">
+                <input type="hidden" id="total-input" name="totalCarrito" value="0.00">
+                <button type="submit" id="ir-a-pagar">Ir a Pagar</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-left">
+                <img src="" alt="" class="modal-img">
+            </div>
+            <div class="modal-right">
+                <span class="modal-title"></span>
+                <p class="modal-description"></p>
+                <div class="cantidad-container">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" min="1" value="1">
+                </div>
+                <span class="modal-precio"></span>
+                <button class="agregar-carrito">Agregar al Carrito</button>
+            </div>
+            <span class="close-modal">&times;</span>
+        </div>
+    </div>
+
+    <script src="scriptconte.js" async></script>
+</body>
+</html>

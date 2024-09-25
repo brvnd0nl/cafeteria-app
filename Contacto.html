@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="styleCotan.css" />
+  </head>
+
+  <body>
+
+    <header> 
+        <img src="Imagenes/Logo.png" alt="Logo" class="logo">
+        <nav class="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="contenido.html">Contenido</a>
+        </nav>
+    </header>
+
+
+    <selection class="contact">
+      <h2>Contactame</h2>
+      <form action="#">
+        <div class="input-box">
+          <div class="input-field field">
+            <input type="text" placeholder="Nombre" id="name" class="item" autocomplete="off">
+            <div class="error-txt">El nombre no puede estar en blanco</div>
+          </div>
+          <div class="input-field field">
+            <input type="text" placeholder="Correo" id="email" class="item" autocomplete="off">
+            <div class="error-txt">El Correo no puede estar en blanco</div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <div class="input-field field">
+            <input type="text" placeholder="Numero" id="phone" class="item" autocomplete="off">
+            <div class="error-txt">El Numero no puede estar en blanco</div>
+          </div>
+          <div class="input-field field">
+            <input type="text" placeholder="Asunto" id="subject" class="item" autocomplete="off">
+            <div class="error-txt">El Asunto no puede estar en blanco</div>
+          </div>
+        </div>
+
+        <div class="textarea-field field">
+          <textarea name="" id="message" cols="30" rows="10" placeholder="Mensage" 
+          class="item" autocomplete="off"></textarea>
+          <div class="error-txt">El Mensaje no puede estar en blanco</div>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </selection>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scriptCotan.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script  type="module"  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+  </body>
+
+  </html>
