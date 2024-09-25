@@ -1,0 +1,71 @@
+/* Asegúrate de que el contenedor principal tenga suficiente altura y márgenes */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+form#formularioPago {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* Ajusta los elementos del formulario */
+form#formularioPago h2 {
+  margin-top: 0;
+}
+
+form#formularioPago label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form#formularioPago input,
+form#formularioPago textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Asegúrate de que el textarea de productos a pagar y notas tengan un tamaño adecuado */
+textarea#productos-recibidos,
+textarea#notas {
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+form#formularioPago button {
+  width: calc(50% - 5px);
+  padding: 10px;
+  margin: 10px 5px 0 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form#formularioPago button:hover {
+  background-color: #0056b3;
+}
+
+form#formularioPago button:last-child {
+  margin-right: 0;
+}

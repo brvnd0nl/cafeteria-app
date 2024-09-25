@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pago</title>
+  <link rel="stylesheet" type="text/css" href="styleformu.css">
+</head>
+<body>
+  <form id="formularioPago" action="formulario.php" method="POST">
+    <h2>Formulario de Pago</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+
+    <label for="telefono">Número de Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+    
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" pattern="^[a-zA-Z0-9\s,.'-]{3,}$" required>
+
+    <label for="fecha-envio">Fecha de Envío:</label>
+    <input type="date" id="fecha-envio" name="fechaEnvio" required>
+
+    <label for="productos-recibidos">Productos a Pagar:</label>
+    <textarea id="productos-recibidos" name="productosRecibidos" readonly></textarea>
+
+    <label for="total-recibido">Total a Pagar:</label>
+    <input type="text" id="total-recibido" name="totalRecibido" readonly>
+
+    <label for="notas">Notas o Recomendaciones:</label>
+    <textarea id="notas" name="notas" placeholder="Ejemplo: Llegaré en 15 minutos, no poner mucha azúcar, menos leche, etc."></textarea>
+
+    <input type="hidden" id="formAction" name="formAction" value="pagar">
+    <button type="submit" onclick="document.getElementById('formAction').value='pagar'">Pagar</button>
+    <button type="submit" onclick="document.getElementById('formAction').value='transferencia'">Transferencia</button>
+    <button type="button" onclick="redirigir('credito.html')">Tarjeta de Crédito</button>
+  </form>
+
+  <script src="scriptformulario.js"></script>
+</body>
+</html>
