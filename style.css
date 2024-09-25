@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+    background-color: #8B4D0F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    user-select: none;
+    width: 210px; /* Cambia el valor según el tamaño que desees */
+    height: auto; /* Autoajusta la altura manteniendo la proporción original */
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+/* Animacion barra*/
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #000000;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #000000;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/*Carrusel*/
+
+.container-carousel {
+    margin-top: 165px; /* Ajusta según sea necesario para dejar espacio debajo del encabezado */
+    position: relative;
+    width: 500px;
+    height: 480px;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+     /* Añade las siguientes propiedades para centrar horizontalmente */
+     margin-left: auto;
+     margin-right: auto;
+  
+}
+
+.carruseles {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slider-section {
+    width: calc(100% / 5);
+    max-width: 500px;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider-section img {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Asegúrate de que el texto esté por encima de la imagen */
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+}
+
+.info h2 {
+    font-size: 50px;
+    font-family: 'Dancing Script';
+    color: #490505;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ***************** */
+/* SECCION S A B O R E S */
+/* ***************** */
+
+#sabores{
+    padding: 50px 0;
+}
+#sabores h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#sabores .fila{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+}
+
+#sabores .fila .item img{
+    max-width: 80px;
+}
+
+#sabores .fila .item{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(115px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 60%;
+    transition: .3s;
+}
+
+#sabores .fila .item:hover{
+    background-color:#ff8f46
+}
+
+#sabores .fila .item .info2{
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/* ***************** */
+/* SECCION C O N T A C TO */
+/* ***************** */
+#contacto{
+    background-color: #324D24;
+    padding: 50px 0;
+}
+#contacto .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+#contacto a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    margin-bottom: 3px;
+}
+#contacto a:hover{
+    text-decoration: underline;
+}
+#contacto h3{
+    margin-bottom: 12px;
+}
+#contacto .media{
+    display: flex;
+    align-items: center;
+}
+#contacto .media i{
+    display: block;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
