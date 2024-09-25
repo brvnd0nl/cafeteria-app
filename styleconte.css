@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Barra de tareas */
+header { 
+    background-color: #8B4D0F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    user-select: none;
+    width: 210px; /* Cambia el valor según el tamaño que desees */
+    height: auto; /* Autoajusta la altura manteniendo la proporción original */
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+/* Animación barra */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #000000;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #000000;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.contenedor {
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos al inicio para que estén al mismo nivel */
+    gap: 20px; /* Espacio entre los elementos */
+    contain: paint;
+    color: #000000;
+}
+
+.contenedor .conteneedor-items {
+    margin-top: 150px; /* Ajusta según sea necesario para dejar espacio debajo del encabezado */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 60%;
+    transition: .3s;
+}
+
+.contenedor .conteneedor-items .item {
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.conteneedor-items .item:hover {
+    box-shadow: 0 0 10px #000000;
+    scale: 1.05;
+}
+
+.conteneedor-items .item .img-item { /* Imagenes */
+    width: 100%;
+    height: 205px;
+    overflow: hidden;
+}
+
+.conteneedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.conteneedor-items .item p {
+    font-size: 10px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* VENTANA EMERGENTE */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    background-color: #4d4747;
+    width: 14cm; /* Ancho de 14 centímetros */
+    height: 10cm; /* Altura de 10 centímetros */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* Cambiar a dirección de columna */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-description {
+    margin-top: 10px; /* Espacio entre el título y la descripción */
+    font-size: 14px; /* Ajustar el tamaño de fuente según tus preferencias */
+    line-height: 1.5; /* Ajustar el interlineado según tus preferencias */
+}
+
+.modal-img {
+    max-width: 5cm; /* Ancho máximo de 5 centímetros */
+    max-height: 7cm; /* Altura máxima de 7 centímetros */
+    width: 250px;
+    height: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Carrito y cantidad */
+.cantidad-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cantidad-container label {
+    margin-right: 5px;
+}
+
+.agregar-carrito {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Precio */
+.modal-precio {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Carrito de compras */
+.carrito-container {
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    transform: translate(0, -50%);
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: max-height 0.3s;
+}
+
+.carrito-container.habilitado {
+    max-height: 400px;
+}
+
+.carrito-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Mantén la dirección de flexión como columna */
+}
+
+.lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.lista-carrito .item-info {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.lista-carrito .titulo-carrito {
+    font-weight: bold;
+}
+
+.lista-carrito .cantidad-carrito,
+.lista-carrito .precio-carrito {
+    font-size: 14px;
+    margin-top: 5px; /* Ajusta el margen superior */
+}
+
+.oculto {
+    display: none;
+}
